@@ -24,16 +24,16 @@ class NewVisitorTest(unittest.TestCase):
 
         inputbox.send_keys('kupić pawie pióra')
         inputbox.send_keys(Keys.ENTER)
-
+        inputbox.send_keys('zrobic przynety')
+        inputbox.send_keys(Keys.ENTER)
         # import time
         # time.sleep(10)
         #
 
         table = self.browser.find_element_by_id('id_list_table')
         rows = table.find_elements_by_tag_name('tr')
-        self.assertTrue(
-            any(row.text == '1: kupić pawie pióra' for row in rows), "nowy element nie znajduje się w tabeli")
-
+        self.assertIn('1: kupić pawie pióra',[row.text for row in rows])
+        self.assertIn('2: zrobic przynety',[row.text for row in rows])
         self.fail('zakończenie testu')
 
 
