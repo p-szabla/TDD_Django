@@ -24,18 +24,22 @@ class NewVisitorTest(unittest.TestCase):
 
         inputbox.send_keys('kupić pawie pióra')
         inputbox.send_keys(Keys.ENTER)
-        inputbox.send_keys('zrobic przynety')
-        inputbox.send_keys(Keys.ENTER)
+        self.browser.implicitly_wait(3)
+        # inputbox.send_keys('zrobic przynety')
+        # inputbox.send_keys(Keys.ENTER)
         # import time
         # time.sleep(10)
         #
 
         table = self.browser.find_element_by_id('id_list_table')
         rows = table.find_elements_by_tag_name('tr')
-        self.assertIn('1: kupić pawie pióra',[row.text for row in rows])
-        self.assertIn('2: zrobic przynety',[row.text for row in rows])
-        self.fail('zakończenie testu')
+        self.assertIn('1: kupić pawie pióra', [row.text for row in rows])
+
+        # self.assertIn('1: kupić pawie pióra',[row.text for row in rows])
+        # self.assertIn('2: zrobic przynety',[row.text for row in rows])
+        # self.fail('zakończenie testu')
 
 
 if __name__ == '__main__':
     unittest.main(warnings='ignore')
+# ftp://ftp.helion.pl/przyklady/tddwpr.zip
