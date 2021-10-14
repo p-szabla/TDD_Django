@@ -41,7 +41,7 @@ class ItemModelTest(TestCase):
 
         second_item=Item()
         second_item.text = 'Drugi element listy'
-        second_item.save
+        second_item.save()
 
         saved_items = Item.objects.all()
         self.assertEqual(saved_items.count(),2)
