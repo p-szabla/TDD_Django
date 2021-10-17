@@ -33,7 +33,9 @@ class NewVisitorTest(LiveServerTestCase):
 
         inputbox.send_keys('kupić pawie pióra')
         inputbox.send_keys(Keys.ENTER)
-        time.sleep(10)
+        time.sleep(3)
+        edith_list_url = self.browser.current_url
+        self.assertRegex(edith_list_url,'/lists/.+')
         self.check_for_row_in_list_table('1: kupić pawie pióra')
 
         inputbox = self.browser.find_element_by_id('id_new_item')
@@ -41,10 +43,29 @@ class NewVisitorTest(LiveServerTestCase):
         inputbox.send_keys(Keys.ENTER)
         # self.browser.implicitly_wait(3000)
 
-        time.sleep(10)
+        time.sleep(3)
         #
 
         table = self.browser.find_element_by_id('id_list_table')
         rows = table.find_elements_by_tag_name('tr')
         self.check_for_row_in_list_table('1: kupić pawie pióra')
         self.check_for_row_in_list_table('2: zrobic przynety')
+
+        self.browser.quit()
+        self.browser = webdriver.Firefox()
+        self.browser.get(self.live_server_url)
+        page_text = self.browser.find_element_by_tag_name('body').text
+        self.assertNotIn('kupić pawie pióra',page_text)
+        self.assertNotIn('zrobic przynety',page_text)
+        inputbox = self.browser.find_element_by_id('id_new_item')
+        inputbox.send_keys('kupić mleko')
+        inputbox.send_keys(Keys.ENTER)
+        time.sleep(3)
+
+        francis_list_url = self.browser.current_url
+        self.assertRegex(francis_list_url,'/lists/.+')
+        self.assertNotEqual(francis_list_url,edith_list_url)
+
+        page_text=self.browser.find_element_by_tag_name('body').text
+        self.assertNotIn('kupić pawie pióra',page_text)
+        self.assertIn('kupić mleko',page_text)
