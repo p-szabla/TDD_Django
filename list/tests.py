@@ -43,7 +43,7 @@ class HomePageTest(TestCase):
         response = home_page(request)
 
         self.assertEqual(response.status_code,302)
-        self.assertEqual(response['location'],'/')
+        self.assertEqual(response['location'],'/lists/the-pnly-list-in-the-world')
 
     def test_home_page_diplays_all_items_list(self):
         Item.objects.create(text='itemey 1')
@@ -84,3 +84,16 @@ class ItemModelTest(TestCase):
         second_saved_item = saved_items[1]
         self.assertEqual(first_saved_item.text,'Absolutnie pierwszy element listy')
         self.assertEqual(second_saved_item.text,'Drugi element listy')
+
+class ListViewTest(TestCase):
+
+    def test_diplays_all_items_list(self):
+        Item.objects.create(text='itemey 1')
+        Item.objects.create(text='itemey 2')
+
+        request = HttpRequest()
+        response = self.client.get('/lists/the-pnly-list-in-the-world')
+
+
+        self.assertContains('itemey 1', response.content.decode())
+        self.assertContains('itemey 2', response.content.decode())
