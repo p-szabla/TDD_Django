@@ -8,16 +8,13 @@ from django.template.loader import render_to_string
 # Create your tests here.
 
 class HomePageTest(TestCase):
-
     def test_root_url_resolves_to_home_page_view(self):
         found = resolve('/')
         self.assertEqual(found.func,home_page)
-
     def test_home_page_returns_correct_html(self):
         request = HttpRequest()
         response = home_page(request)
         expected_html = render_to_string('home.html')
-
         self.assertEqual(response.content.decode(),expected_html)
 
         # self.assertTrue(response.content.startswith(b'<html>'))
@@ -43,23 +40,8 @@ class HomePageTest(TestCase):
         response = home_page(request)
 
         self.assertEqual(response.status_code,302)
-        self.assertEqual(response['location'],'/lists/the-pnly-list-in-the-world')
+        self.assertEqual(response['location'],'/lists/the-only-list-in-the-world')
 
-    def test_home_page_diplays_all_items_list(self):
-        Item.objects.create(text='itemey 1')
-        Item.objects.create(text='itemey 2')
-
-        request = HttpRequest()
-        response = home_page(request)
-
-
-        self.assertIn('itemey 1', response.content.decode())
-        self.assertIn('itemey 2', response.content.decode())
-
-
-        # self.assertIn('Nowy element listy', response.content.decode())
-        # expected_html = render_to_string('home.html',{'new_item_text': 'Nowy element listy'})
-        # self.assertEqual(response.content.decode(),expected_html)
 
     def test_home_page_only_saves_items_when_necessary(self):
         request = HttpRequest()
@@ -90,10 +72,11 @@ class ListViewTest(TestCase):
     def test_diplays_all_items_list(self):
         Item.objects.create(text='itemey 1')
         Item.objects.create(text='itemey 2')
-
         request = HttpRequest()
-        response = self.client.get('/lists/the-pnly-list-in-the-world')
+        response = self.client.get('/lists/the-only-list-in-the-world')
+        self.assertContains(response, 'itemey 1')
+        self.assertContains(response, 'itemey 2')
 
-
-        self.assertContains('itemey 1', response.content.decode())
-        self.assertContains('itemey 2', response.content.decode())
+    def uses_list_template(self):
+        response = self.client.get('/lists/the-only-lists-in-the-world/')
+        self.assertTemplateUsed(response, 'list.html')
