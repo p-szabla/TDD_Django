@@ -78,5 +78,22 @@ class ListViewTest(TestCase):
         self.assertContains(response, 'itemey 2')
 
     def uses_list_template(self):
-        response = self.client.get('/lists/the-only-lists-in-the-world/')
+        response = self.client.get('/lists/the-only-lists-in-the-world')
         self.assertTemplateUsed(response, 'list.html')
+
+class NewListTest(TestCase):
+
+
+    def test_home_saving_a_POST_request(self):
+
+        self.client.post('/lists/new',data={'item_text':"Nowy element listy"})
+        self.assertEqual(Item.objects.count(),1)
+        new_item = Item.objects.first()
+        self.assertEqual(new_item.text,'Nowy element listy')
+
+
+    def test_home_page_redirects_after_POST_request(self):
+        response = self.client.post('/lists/new',data={'item_text':"Nowy element listy"})
+
+        self.assertEqual(response.status_code,302)
+        self.assertEqual(response['location'],'/lists/the-only-list-in-the-world')
