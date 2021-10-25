@@ -20,33 +20,33 @@ class HomePageTest(TestCase):
         # self.assertTrue(response.content.startswith(b'<html>'))
         # self.assertIn(b'<title>Listy rzeczy do zrobienia</title>', response.content)
         # self.assertTrue(response.content.strip().endswith(b'</html>'))
-    def test_home_page_can_save_a_POST_request(self):
-        request = HttpRequest()
-        request.method = 'POST'
-        request.POST['item_text'] = 'Nowy element listy'
+    # def test_home_page_can_save_a_POST_request(self):
+    #     request = HttpRequest()
+    #     request.method = 'POST'
+    #     request.POST['item_text'] = 'Nowy element listy'
+    #
+    #     response = home_page(request)
+    #
+    #     self.assertEqual(Item.objects.count(),1)
+    #     new_item = Item.objects.first()
+    #     self.assertEqual(new_item.text,'Nowy element listy')
+    #
+    #
+    # def test_home_page_redirects_after_POST_request(self):
+    #     request = HttpRequest()
+    #     request.method = 'POST'
+    #     request.POST['item_text'] = 'Nowy element listy'
+    #
+    #     response = home_page(request)
+    #
+    #     self.assertEqual(response.status_code,302)
+    #     self.assertEqual(response['location'],'/lists/the-only-list-in-the-world')
 
-        response = home_page(request)
 
-        self.assertEqual(Item.objects.count(),1)
-        new_item = Item.objects.first()
-        self.assertEqual(new_item.text,'Nowy element listy')
-
-
-    def test_home_page_redirects_after_POST_request(self):
-        request = HttpRequest()
-        request.method = 'POST'
-        request.POST['item_text'] = 'Nowy element listy'
-
-        response = home_page(request)
-
-        self.assertEqual(response.status_code,302)
-        self.assertEqual(response['location'],'/lists/the-only-list-in-the-world')
-
-
-    def test_home_page_only_saves_items_when_necessary(self):
-        request = HttpRequest()
-        home_page(request)
-        self.assertEqual(Item.objects.count(),0)
+    # def test_home_page_only_saves_items_when_necessary(self):
+    #     request = HttpRequest()
+    #     home_page(request)
+    #     self.assertEqual(Item.objects.count(),0)
 
 class ItemModelTest(TestCase):
 
