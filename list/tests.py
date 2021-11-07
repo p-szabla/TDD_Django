@@ -87,7 +87,7 @@ class ListViewTest(TestCase):
 
     def test_uses_list_templates(self):
         list_=List.objects.create()
-        response = self.client.get(f'/list/{list_.id}/' )
+        response = self.client.get(f'/lists/{list_.id}/' )
         self.assertTemplateUsed(response,'list.html')
 
     def test_diplays_only_items_for_list(self):
@@ -99,7 +99,7 @@ class ListViewTest(TestCase):
         Item.objects.create(text='itemey a',list=other_list)
         Item.objects.create(text='itemey b',list=other_list)
 
-        response = self.client.get(f'/list/{correct_list.id}/')
+        response = self.client.get(f'/lists/{correct_list.id}/')
         self.assertContains(response, 'itemey 1')
         self.assertContains(response, 'itemey 2')
         self.assertNotContains(response, 'itemey a')
@@ -123,8 +123,9 @@ class NewListTest(TestCase):
         self.assertEqual(new_item.text,'Nowy element listy')
 
 
-    def test_home_page_redirects_after_POST_request(self):
+    def test_redirects_after_POST_request(self):
+
         response = self.client.post('/lists/new',data={'item_text':"Nowy element listy"})
 
-        self.assertEqual(response.status_code,302)
-        self.assertEqual(response['location'],'/lists/the-only-list-in-the-world')
+        new_list=List.objects.first()
+        self.assertRedirects(response,f'/lists/{new_list.id}/')
