@@ -48,8 +48,9 @@ class NewVisitorTest(LiveServerTestCase):
 
         table = self.browser.find_element_by_id('id_list_table')
         rows = table.find_elements_by_tag_name('tr')
-        self.check_for_row_in_list_table('1: kupić pawie pióra')
         self.check_for_row_in_list_table('2: zrobic przynety')
+        self.check_for_row_in_list_table('1: kupić pawie pióra')
+
 
         self.browser.quit()
         self.browser = webdriver.Firefox()
