@@ -1,0 +1,66 @@
+[1mdiff --git a/functional_tests/__pycache__/tests.cpython-38.pyc b/functional_tests/__pycache__/tests.cpython-38.pyc[m
+[1mindex 7a00c4f..e608fee 100644[m
+Binary files a/functional_tests/__pycache__/tests.cpython-38.pyc and b/functional_tests/__pycache__/tests.cpython-38.pyc differ
+[1mdiff --git a/list/templates/home.html b/list/templates/home.html[m
+[1mindex d0d3074..b3e26d3 100644[m
+[1m--- a/list/templates/home.html[m
+[1m+++ b/list/templates/home.html[m
+[36m@@ -1,13 +1,5 @@[m
+[31m-<html>[m
+[31m-<head>[m
+[31m-  <title>Listy rzeczy do zrobienia</title>[m
+[31m-</head>[m
+[31m-<body>[m
+[31m-    <h1>Nowa lista rzeczy do zrobienia </h1>[m
+[31m-    <form method="POST" action="/lists/new">[m
+[31m-      <input name ="item_text" id= "id_new_item" placeholder = "wpisz rzecz do zrobienia" />[m
+[31m-        {% csrf_token %}[m
+[32m+[m[32m{% extends 'base.html' %}[m
+ [m
+[31m-    </form>[m
+[31m-</body>[m
+[31m-</html>[m
+[32m+[m[32m{% block header_text %} Uwórz nową lista rzeczy do zrobienia {% endblock %}[m
+[32m+[m
+[32m+[m[32m{% block form_action %} /lists/new {% endblock %}[m
+[1mdiff --git a/list/templates/list.html b/list/templates/list.html[m
+[1mindex 34db109..8265a7d 100644[m
+[1m--- a/list/templates/list.html[m
+[1m+++ b/list/templates/list.html[m
+[36m@@ -1,14 +1,17 @@[m
+[31m-<html>[m
+[31m-<head>[m
+[31m-  <title>Listy rzeczy do zrobienia</title>[m
+[31m-</head>[m
+[31m-<body>[m
+[31m-    <h1>Twoja lista rzeczy do zrobienia </h1>[m
+[31m-    <form method="POST" action="/lists/{{list.id}}/add_item">[m
+[31m-      <input name ="item_text" id= "id_new_item" placeholder = "wpisz rzecz do zrobienia" />[m
+[31m-      {% csrf_token %}[m
+[31m-[m
+[31m-    </form>[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m{% extends 'base.html' %}[m
+[32m+[m
+[32m+[m[32m{% block header_text %} Twoja lista rzeczy do zrobienia {% endblock %}[m
+[32m+[m
+[32m+[m[32m{% block form_action %} /lists/{{ list.id }}/add_item {% endblock %}[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m{% block table %}[m
+[32m+[m
+         <table id="id_list_table">[m
+ [m
+           {% for item in list.item_set.all %}[m
+[36m@@ -18,5 +21,5 @@[m
+         {% endfor %}[m
+ [m
+         </table>[m
+[31m-</body>[m
+[31m-</html>[m
+[32m+[m
+[32m+[m[32m{% endblock %}[m
