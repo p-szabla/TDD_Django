@@ -556,3 +556,146 @@ console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "res
 
 ###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1639256297416	geckodriver	INFO	Listening on 127.0.0.1:62961
+1639256300481	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofileKSzOG1"
+1639256300957	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofileKSzOG1\\search.json.mozlz4", (void 0)))
+1639256302810	Marionette	INFO	Listening on port 62971
+1639256303153	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+1639256309356	Marionette	INFO	Stopped listening on port 62971
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639256309815	geckodriver	INFO	Listening on 127.0.0.1:63019
+1639256312886	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofile4imUzw"
+1639256313115	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofile4imUzw\\search.json.mozlz4", (void 0)))
+1639256315010	Marionette	INFO	Listening on port 63028
+1639256315042	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+1639256318164	Marionette	INFO	Stopped listening on port 63028
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639256318643	geckodriver	INFO	Listening on 127.0.0.1:63074
+1639256321700	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofile6UVGii"
+1639256321927	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofile6UVGii\\search.json.mozlz4", (void 0)))
+1639256323807	Marionette	INFO	Listening on port 63083
+1639256323860	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639256323942	Marionette	INFO	Stopped listening on port 63083
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: services.settings: main/partitioning-exempt-urls sync interrupted by shutdown
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639256361025	geckodriver	INFO	Listening on 127.0.0.1:63134
+1639256364096	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofileVvxLdh"
+1639256364350	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofileVvxLdh\\search.json.mozlz4", (void 0)))
+1639256366262	Marionette	INFO	Listening on port 63142
+1639256366766	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+1639256372950	Marionette	INFO	Stopped listening on port 63142
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639256373411	geckodriver	INFO	Listening on 127.0.0.1:63192
+1639256376457	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofilet8233t"
+1639256376693	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofilet8233t\\search.json.mozlz4", (void 0)))
+1639256378555	Marionette	INFO	Listening on port 63202
+1639256378609	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+1639256381731	Marionette	INFO	Stopped listening on port 63202
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1639256382217	geckodriver	INFO	Listening on 127.0.0.1:63250
+1639256385282	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofileQbGOJc"
+1639256385506	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofileQbGOJc\\search.json.mozlz4", (void 0)))
+1639256387340	Marionette	INFO	Listening on port 63259
+1639256387444	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639256387518	Marionette	INFO	Stopped listening on port 63259
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: services.settings: main/partitioning-exempt-urls sync interrupted by shutdown
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639256517335	geckodriver	INFO	Listening on 127.0.0.1:63331
+1639256520374	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofileTDWBzQ"
+1639256520645	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofileTDWBzQ\\search.json.mozlz4", (void 0)))
+1639256522535	Marionette	INFO	Listening on port 63339
+1639256523030	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+1639256529191	Marionette	INFO	Stopped listening on port 63339
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639256529650	geckodriver	INFO	Listening on 127.0.0.1:63388
+1639256532729	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofiledOjhbY"
+1639256532961	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofiledOjhbY\\search.json.mozlz4", (void 0)))
+1639256534885	Marionette	INFO	Listening on port 63397
+1639256535397	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+1639256538515	Marionette	INFO	Stopped listening on port 63397
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+1639256538990	geckodriver	INFO	Listening on 127.0.0.1:63443
+1639256542062	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofile9edfwS"
+1639256542309	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofile9edfwS\\search.json.mozlz4", (void 0)))
+1639256544014	Marionette	INFO	Listening on port 63452
+1639256544138	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639256544219	Marionette	INFO	Stopped listening on port 63452
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: services.settings: main/partitioning-exempt-urls sync interrupted by shutdown
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+1639256566925	geckodriver	INFO	Listening on 127.0.0.1:63530
+1639256569968	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofileo4OlVB"
+1639256570211	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofileo4OlVB\\search.json.mozlz4", (void 0)))
+1639256572179	Marionette	INFO	Listening on port 63538
+1639256572659	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+1639256578800	Marionette	INFO	Stopped listening on port 63538
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639256579265	geckodriver	INFO	Listening on 127.0.0.1:63583
+1639256582328	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofile4y0typ"
+1639256582566	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofile4y0typ\\search.json.mozlz4", (void 0)))
+1639256584270	Marionette	INFO	Listening on port 63592
+1639256584372	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+1639256587489	Marionette	INFO	Stopped listening on port 63592
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1639256587973	geckodriver	INFO	Listening on 127.0.0.1:63636
+1639256591044	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofilej5Y70Z"
+1639256591284	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pawel\\AppData\\Local\\Temp\\rust_mozprofilej5Y70Z\\search.json.mozlz4", (void 0)))
+1639256593190	Marionette	INFO	Listening on port 63646
+1639256593205	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639256593291	Marionette	INFO	Stopped listening on port 63646
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: services.settings: main/partitioning-exempt-urls sync interrupted by shutdown
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
